@@ -47,7 +47,7 @@ for _, mixture in pairs(mixture) do
 	minetest.register_node("porcelain:cold_mixture_" .. mixture[1], {
 		description = mixture[2] .. " " .. S("Cold Mixture"),
 		tiles = {"cold_mixture_" .. mixture[1] ..".png"},
-		groups = {cracky = 3, cold_mixture = 1},
+		groups = {cracky = 3, porcelain = 1},
 		sounds = default.node_sound_stone_defaults(),
 		is_ground_content = false
 	})
@@ -75,9 +75,9 @@ for _, mixture in pairs(mixture) do
 		minetest.register_craft({
 			output = "porcelain:cold_mixture_" .. mixture[1] .. " 9",
 			recipe = {
-				{"group:cold_mixture", "group:cold_mixture", "group:cold_mixture"},
-				{"group:cold_mixture", "dye:".. mixture[1], "group:cold_mixture"},
-				{"group:cold_mixture", "group:cold_mixture", "group:cold_mixture"}
+				{"porcelain:cold_mixture_natural", "porcelain:cold_mixture_natural", "porcelain:cold_mixture_natural"},
+				{"porcelain:cold_mixture_natural", "dye:".. mixture[1], "porcelain:cold_mixture_natural"},
+				{"porcelain:cold_mixture_natural", "porcelain:cold_mixture_natural", "porcelain:cold_mixture_natural"}
 			}
 		})
 	end
@@ -89,7 +89,7 @@ for _, mixture in pairs(mixture) do
 				"porcelain:" .. mixture[1], {
 			description = mixture[2] .. " " .. S("porcelain"),
 			tiles = {"porcelain_" .. mixture[1] .. ".png"},
-			groups = {cracky = 3, porcelain = 1},
+			groups = {cracky = 3},
 			sounds = default.node_sound_stone_defaults()
 		})
 		if stairsplus_compat then
@@ -104,7 +104,7 @@ for _, mixture in pairs(mixture) do
 	-- stairs redo
 	elseif stairs_mod and stairs.mod then
 		stairs.register_all("porcelain_" .. mixture[1], "porcelain:" .. mixture[1],
-			{cracky = 3, porcelain = 1},
+			{cracky = 3},
 			{"porcelain_" .. mixture[1] .. ".png"},
 			mixture[2] .. " " .. S("porcelain"),
 			default.node_sound_stone_defaults())
@@ -112,7 +112,7 @@ for _, mixture in pairs(mixture) do
 	-- default stairs
 	elseif stairs_mod then
 		stairs.register_stair_and_slab("porcelain_".. mixture[1], "porcelain:".. mixture[1],
-			{cracky = 3, porcelain = 1},
+			{cracky = 3},
 			{"porcelain_" .. mixture[1] .. ".png"},
 			mixture[2] .. " " .. S("porcelain Stair"),
 			mixture[2] .. " " .. S("porcelain Slab"),
@@ -151,7 +151,7 @@ for _, mixture in pairs(mixture) do
 	if techcnc_mod then
 		minetest.register_on_mods_loaded(function()
 			technic_cnc.register_all("porcelain:" .. mixture[1],
-				{cracky = 3, not_in_creative_inventory = 1, porcelain = 1},
+				{cracky = 3, not_in_creative_inventory = 1},
 				{"porcelain_" .. mixture[1] .. ".png"},
 				mixture[2] .. " porcelain")
 		end)
@@ -165,7 +165,7 @@ for _, mixture in pairs(mixture) do
 				"porcelain:cold_mixture_" .. mixture[1], {
 			description = mixture[2] .. " " .. S("cold mixture"),
 			tiles = {"cold_mixture_" .. mixture[1] .. ".png"},
-			groups = {cracky = 3, cold_mixture = 1},
+			groups = {cracky = 3},
 			sounds = default.node_sound_stone_defaults()
 		})
 
@@ -181,7 +181,7 @@ for _, mixture in pairs(mixture) do
 	-- stairs redo
 	elseif stairs_mod and stairs.mod then
 		stairs.register_all("cold_mixture_" .. mixture[1], "porcelain:cold_mixture_" .. mixture[1],
-			{cracky = 3, cold_mixture = 1},
+			{cracky = 3},
 			{"cold_mixture_" .. mixture[1] .. ".png"},
 			mixture[2] .. " " .. S("cold mixture"),
 			default.node_sound_stone_defaults())
@@ -189,7 +189,7 @@ for _, mixture in pairs(mixture) do
 	-- default stairs
 	elseif stairs_mod then
 		stairs.register_stair_and_slab("cold_mixture_".. mixture[1], "porcelain:cold_mixture_".. mixture[1],
-			{cracky = 3, cold_mixture = 1},
+			{cracky = 3},
 			{"cold_mixture_" .. mixture[1] .. ".png"},
 			mixture[2] .. " " .. S("cold mixture Stair"),
 			mixture[2] .. " " .. S("cold mixture Slab"),
@@ -200,7 +200,7 @@ for _, mixture in pairs(mixture) do
 	if techcnc_mod then
 		minetest.register_on_mods_loaded(function()
 			technic_cnc.register_all("porcelain:cold_mixture_" .. mixture[1],
-				{cracky = 3, not_in_creative_inventory = 1, cold_mixture = 1},
+				{cracky = 3, not_in_creative_inventory = 1},
 				{"cold_mixture_" .. mixture[1] .. ".png"},
 				mixture[2] .. " cold mixture")
 		end)
