@@ -8,20 +8,19 @@ porcelain is harder and lighter
 ties in well with bakedclay adding an aditional 32 shades of color to the pallet..
 
 additionaly this mod adds two new crafting items to the mix.
-
-bottled water
-baking soda
+ *  bottled water
+ *  baking soda
 
 depends
-farming_redo
-basic_materials
-vessels
+  *  farming_redo
+  *  basic_materials
+  *  vessels
 
 other mods
-
-technic
-moreblocks
-bakedclay
+  *  technic
+  *  moreblocks
+  *  bakedclay
+  
 
 
 
