@@ -7,12 +7,15 @@ cold_mixture is soft and darker
 porcelain is harder and lighter
 ties in well with bakedclay adding an aditional 32 shades of color to the pallet..
 
-additionaly this mod adds tow crafting items to the mix.
+additionaly this mod adds two new crafting items to the mix.
 
 bottled water
 baking soda
 
-depends on the Farming Redo mod.
+depends
+farming_redo
+basic_materials
+vessels
 
 other mods
 
